@@ -8,11 +8,17 @@
 	private int day;
 	private int year;
 	
-	public Date(int _month, int _day, int _year)
+	//no argument constructor
+	public Date()
 	{
-		setMonth(_month);
-		setDay(_day);
-		setYear(_year);
+	
+	}
+	
+	public Date(int mo, int dy, int yr)
+	{
+		setMonth(mo);
+		setDay(dy);
+		setYear(yr);
 		
 	}//End Date Constructor
 	
@@ -31,19 +37,19 @@
 	}
 
 	//set Methods
-	public static void setMonth(int _month)
+	public static void setMonth(int m)
 	{
-		month = _month;
+		month = m;
 	}
 	
-	public static void setDay(int _day)
+	public static void setDay(int d)
 	{
-		day = _day;
+		day = d;
 	}
 	
-	public static void setYear(int _year)
+	public static void setYear(int y)
 	{
-		year = _year;
+		year = y;
 	}
 	
 	//toString Method
