@@ -1,5 +1,6 @@
 /* Customer
  RW @ 2014-09-06
+ JS 
  */
  
 public class Customer
@@ -54,14 +55,50 @@ public class Customer
 	//+createHistory():String
 	public String createHistory()
 	{
-	
+	Double charge = calculateCharge();
+
+		int numberOfMusicProducts = 0;
+		int numberOfApps = 0;
+
+		for(int i = 0; i < productList.size(); i++)
+		{
+			if ((productList.get(i).title == "Meet Bach")
+					|| (productList.get(i).title == "Rihanna")
+					|| (productList.get(i).title == "For the Road"))
+
+		numberOfMusicProducts++;
+
+			else
+
+				numberOfApps++;
+
+		}
+
+		return (name + "  " + numberOfMusicProducts + " " + "music products " + numberOfApps + " " + "apps" + " $" + charge + "\n");
 	}
+
 	
 	//+calculateCharge(Void):Double
-	public Double void calculateCharge()
+	public Double calculateCharge()
 	{
-	
+	Double output = 0.00;
+
+		for (int i = 0; i < productList.size(); i++) 
+		{
+			if ((productList.get(i).title == "Meet Bach")
+					|| (productList.get(i).title == "Rihanna")
+					|| (productList.get(i).title == "For the Road"))
+
+				output = output + ((productList.get(i).price) * ((Music)productList.get(i)).numberOfSongsPurchased);
+
+			else
+				output = output + ((productList.get(i).price));
+
+		}
+
+		return output;
 	}
+
 	
 	//+addToProductList(Product):Void
 	public void addToProductList(Product _product)
