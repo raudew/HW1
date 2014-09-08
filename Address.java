@@ -9,8 +9,19 @@
 	private String state;
 	private int zip;
 	
+	public Address()
+	{
+		setStreet("");
+		setCity("");
+		setState("");
+		setZip(0);
+	}
 	public Address (String _street, String _city, String _state, int _zip)
 	{
+		setStreet(_street);
+		setCity(_city);
+		setState(_state);
+		setZip(_zip);
 		
 	}//End Address Constructor
 	
