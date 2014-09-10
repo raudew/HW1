@@ -1,52 +1,40 @@
-/* Product
- RW @ 2014-09-06
-*/
 
-public class Product
-{
-	private String title;
-	private Double price;
+public abstract class Product {
+	String title;
+	private double price;
 	private Date purchaseDate;
-	
-	public Product(String _title, Double price; Date _date)
-	{
-	
-	}//End Product Constructor
 
-	//get methods
-	public static String getTitle()
-	{
+	public Product(String title, double price, Date purchaseDate) {
+		setTitle(title);
+		setPrice(price);
+		setPurchaseDate(purchaseDate);
+	}
+
+	public String getTitle() {
 		return title;
 	}
-	
-	public static Double getPrice()
-	{
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public double getPrice() {
 		return price;
 	}
-	
-	public static Date getPurchaseDate()
-	{
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public Date getPurchaseDate() {
 		return purchaseDate;
 	}
-	
-	public static void setTitle(String _title)
-	{
-		title = _title;
+
+	public void setPurchaseDate(Date purchaseDate) {
+		this.purchaseDate = purchaseDate;
 	}
-	
-	public static void setPrice(Double _price)
-	{
-		price = _price;
+
+	public String toString() {
+		return title+ "" +"$"+price +purchaseDate;
 	}
-	
-	public static void setPurchaseDate(Date _date)
-	{
-		date = _date;
-	}
-	
-	public String toString()
-	{
-		return ("Title: " + title + "\n\rPrice: " + price + "\n\rPurchaseDate: " + date);
-	}
-	
-}//End Product Class
+}

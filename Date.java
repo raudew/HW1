@@ -1,5 +1,5 @@
 /* Date
- RW @ 2014-09-06
+ 
  */
  
  public class Date
